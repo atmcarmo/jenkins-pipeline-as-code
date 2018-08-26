@@ -1,5 +1,8 @@
 package com.github.atmcarmo
 
+/**
+ * Wrapper for Jenkins instance.
+ */
 @Singleton
 class Jenkins {
     def jenkins

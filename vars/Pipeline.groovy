@@ -9,15 +9,15 @@ import com.github.atmcarmo.UnitTestStage
 def call(body){
     Jenkins.setup(this)
 
-        new CheckoutCode().execute()
+    new CheckoutCode().execute()
 
-        if (PipelineBuildYaml.instance.hasUnitTests) {
-            new UnitTestStage().execute()
-        }
+    if (PipelineBuildYaml.instance.hasUnitTests) {
+        new UnitTestStage().execute()
+    }
 
-        if (PipelineBuildYaml.instance.hasUiTests) {
-            new UiTestStage().execute()
-        }
+    if (PipelineBuildYaml.instance.hasUiTests) {
+        new UiTestStage().execute()
+    }
 
 
 }

@@ -4,7 +4,6 @@ import groovy.transform.InheritConstructors
 
 @InheritConstructors
 class UiTestStage extends BaseStage {
-
     def stage() {
         Jenkins.instance.jenkins.sh(PipelineBuildYaml.instance.uiTestsSeleniumGridCommand)
         def numberOfcontainers = PipelineBuildYaml.instance.uiTestsSeleniumGridNodes

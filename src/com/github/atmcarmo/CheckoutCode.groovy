@@ -1,5 +1,11 @@
 package com.github.atmcarmo
 
+import groovy.transform.InheritConstructors
+
+/**
+ * Stage for checkout code from Git.
+ */
+@InheritConstructors
 class CheckoutCode extends BaseStage {
 
     def getStageName() {
