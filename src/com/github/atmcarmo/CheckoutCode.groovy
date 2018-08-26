@@ -19,5 +19,7 @@ class CheckoutCode extends BaseStage {
                 ],
                 userRemoteConfigs                : scm.userRemoteConfigs
         ])
+
+        PipelineBuildYaml.parsePipelineYaml()
     }
 }

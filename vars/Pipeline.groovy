@@ -11,8 +11,6 @@ def call(body){
 
         new CheckoutCode().execute()
 
-        PipelineBuildYaml.parsePipelineYaml()
-
         if (PipelineBuildYaml.instance.hasUnitTests) {
             new UnitTestStage().execute()
         }
