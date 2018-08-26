@@ -21,7 +21,7 @@ class UiTestStage extends BaseTestStage {
         Jenkins.instance.jenkins.input(message: "Do a docker ps | grep zalenium | wc -l. Infrastructure created :)", submitter: "admin",)
         Jenkins.instance.jenkins.sh(PipelineBuildYaml.instance.uiTestsSeleniumGridCommand)
 
-        Jenkins.instance.jenkins.sh("\$(which docker) run stop zalenium")
+        Jenkins.instance.jenkins.sh("\$(which docker) stop zalenium")
 
     }
 
