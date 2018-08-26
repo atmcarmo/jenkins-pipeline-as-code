@@ -8,8 +8,6 @@ import com.github.atmcarmo.UiTestStage
 import com.github.atmcarmo.UnitTestStage
 
 def call(body){
-    //PipelineProperties.setProperties()
-
     Jenkins.setup(this)
 
     NodeAgent agent = new NodeAgent();
@@ -17,11 +15,11 @@ def call(body){
         new CheckoutCode().execute()
 
         if (PipelineBuildYaml.instance.hasUnitTests) {
-            new UnitTestStage().execute()
+            new UnitTestStage(PipelineBuildYaml.instance.hasUnitTests).execute()
         }
 
         if (PipelineBuildYaml.instance.hasUiTests) {
-            new UiTestStage().execute()
+            new UiTestStage(PipelineBuildYaml.instance.hasUnitTests).execute()
         }
     })
 

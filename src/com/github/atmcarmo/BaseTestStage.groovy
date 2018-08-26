@@ -1,10 +1,17 @@
 package com.github.atmcarmo
 
+/**
+ * Base class for test stages.
+ */
 abstract class BaseTestStage implements PipelineExecutable {
-    def executeStage = true
+    def executeStage
 
     abstract def testStage()
     abstract def getStageName()
+
+    BaseTestStage(executeStage) {
+        this.executeStage = executeStage
+    }
 
     def execute() {
         if (executeStage) {
