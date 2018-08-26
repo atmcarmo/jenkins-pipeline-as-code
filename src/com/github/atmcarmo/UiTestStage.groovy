@@ -3,9 +3,9 @@ package com.github.atmcarmo
 import groovy.transform.InheritConstructors
 
 @InheritConstructors
-class UiTestStage extends BaseTestStage {
+class UiTestStage extends BaseStage {
 
-    def testStage() {
+    def stage() {
         Jenkins.instance.jenkins.sh(PipelineBuildYaml.instance.uiTestsSeleniumGridCommand)
         def numberOfcontainers = PipelineBuildYaml.instance.uiTestsSeleniumGridNodes
 
