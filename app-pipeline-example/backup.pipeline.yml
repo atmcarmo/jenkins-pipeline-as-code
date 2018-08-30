@@ -3,5 +3,5 @@ unit_tests:
 
 ui_tests:
   seleniumgrid_nodes: 2
-  command:
-    - mvn test -P selenium
+    command:
+      - mvn test -P selenium
