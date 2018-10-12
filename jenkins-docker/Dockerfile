@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:lts
+FROM jenkins/jenkins:2.138.1
 
 RUN /usr/local/bin/install-plugins.sh git workflow-aggregator pipeline-multibranch-defaults workflow-cps-global-lib discard-old-build pipeline-utility-steps
 # Skip initial setup
